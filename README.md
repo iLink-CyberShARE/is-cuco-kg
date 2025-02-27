@@ -4,9 +4,9 @@ Information Systems meets CUltural COmpetencies Knowledge Graph
 IS-CUCO Knowledge Graph: https://purl.org/is-cuco-kg
 
 # Contributors
-Bianca Alvarez (UTEP)
-Natalia Villanueva Rosales (UTEP)
-Oscar Mondragon (UTEP)
+Bianca Alvarez (UTEP)   
+Natalia Villanueva Rosales (UTEP)   
+Oscar Mondragon (UTEP)   
 
 # Acknowledgements
 
