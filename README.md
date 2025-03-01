@@ -4,7 +4,7 @@ Information Systems meets CUltural COmpetencies Knowledge Graph
 IS-CUCO Knowledge Graph 
 
 # How to Use
-Download is-cuco-kg.rdf and open using an ontology editor (e.g. protege).
+Download is-cuco-kg.rdf and open using an ontology editor (e.g. Protege).
 
 # Contributors
 Bianca Alvarez (UTEP)   
