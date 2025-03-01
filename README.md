@@ -1,7 +1,12 @@
 # is-cuco-kg
 Information Systems meets CUltural COmpetencies Knowledge Graph
 
-IS-CUCO Knowledge Graph: https://purl.org/is-cuco-kg
+IS-CUCO Knowledge Graph 
+
+# How to Use
+Download is-cuco-kg.rdf and open using protege.
+
+Protege available at: [https://protege.stanford.edu/](https://protege.stanford.edu/)
 
 # Contributors
 Bianca Alvarez (UTEP)   
