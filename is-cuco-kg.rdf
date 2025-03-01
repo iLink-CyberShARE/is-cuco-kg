@@ -1,0 +1,1371 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://purl.org/is-cuco-kg#"
+     xml:base="https://purl.org/is-cuco-kg"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:is-x="http://anonymous_name_space/is-x#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:is-cuco-kg="https://purl.org/is-cuco-kg#">
+    <owl:Ontology rdf:about="https://purl.org/is-cuco-kg">
+        <rdfs:author>Bianca Alvarez</rdfs:author>
+        <rdfs:author>Natalia Villanueva-Rosales</rdfs:author>
+        <rdfs:author>Wellington Verduga</rdfs:author>
+        <rdfs:comment>v3-cultural factors and IS-CUCO survey concepts</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/sourcesource -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/sourcesource"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#author -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#author"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#associatedWith -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#associatedWith"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#considers -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#considers">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://purl.org/is-cuco-kg#isConsideredBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#has -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#has"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#hasLocation"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#hasPart">
+        <owl:inverseOf rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#hasService -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#hasService">
+        <owl:inverseOf rdf:resource="https://purl.org/is-cuco-kg#isServiceOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#hasStyle -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#hasStyle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#impacts -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#impacts">
+        <owl:inverseOf rdf:resource="https://purl.org/is-cuco-kg#isImpactedBy"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#hasPart"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#impacts"/>
+        </owl:propertyChainAxiom>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#impacts"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#isPartOf"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#influences -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#influences"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#isA -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isA">
+        <rdfs:subPropertyOf rdf:resource="https://purl.org/is-cuco-kg#associatedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#isConsideredBy -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isConsideredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#isImpactedBy -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isImpactedBy">
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#hasPart"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#isImpactedBy"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isLocatedAt"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#isOfferedBy -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isOfferedBy">
+        <owl:inverseOf rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isPartOf"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#isPreferredBy -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isPreferredBy">
+        <owl:inverseOf rdf:resource="https://purl.org/is-cuco-kg#prefers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#isServiceOf -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isServiceOf"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#offers -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#offers"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#prefers -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#prefers"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#supplies -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#supplies"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#supports -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#supports"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#use -->
+
+    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#use">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Artifact_Technology -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Artifact_Technology">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Material_Culture"/>
+        <dc:source>https://pressbooks.howardcc.edu/soci101/chapter/3-2-the-elements-of-culture/#:~:text=The%20major%20elements%20of%20culture,conceive%20of%20concepts%20and%20objects.</dc:source>
+        <rdfs:comment>material objects, that constitute a society’s material culture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#CACFP -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#CACFP">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/cacfp</terms:sourcesource>
+        <rdfs:comment>The Child and Adult Care Food Program (CACFP) is a federal program that provides reimbursements for nutritious meals and snacks to eligible children and adults</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Child_Nutrition_Programs -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Child_Nutrition_Programs">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Federal_Programs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:sourcesource>https://www.nutrition.gov/child-nutrition-programs</terms:sourcesource>
+        <rdfs:comment>Programs that offer food and nutrition assistance for children, including the School Breakfast Program and National School Lunch Program.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#City -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#City">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Commodity_Supplemental_Food_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Commodity_Supplemental_Food_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Federal_Programs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:sourcesource>https://www.fns.usda.gov/csfp/commodity-supplemental-food-program</terms:sourcesource>
+        <rdfs:comment>The Commodity Supplemental Food Program (CSFP) works to improve the health of low-income persons at least 60 years of age by supplementing their diets with nutritious USDA Foods. USDA distributes both food and administrative funds to participating states and Indian Tribal Organizations to operate CSFP.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Cultural_Factor -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Cultural_Factor"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Donate -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Donate">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+        <terms:sourcesource>https://en.wikipedia.org/wiki/Donation</terms:sourcesource>
+        <rdfs:comment>A donation is a gift for charity, humanitarian aid, or to benefit a cause.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#EBT_card -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#EBT_card">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+        <rdfs:comment>Benefits are loaded onto an EBT card that can be used to purchase groceries.- SNAP service</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Farmers_Market -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Farmers_Market">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Farmers_Market_Nutrition_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Farmers_Market_Nutrition_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Nutrition_Assistance_Programs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#WIC"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:sourcesource>https://www.fns.usda.gov/fmnp/wic-farmers-market-nutrition-program</terms:sourcesource>
+        <rdfs:comment>The WIC Farmers’ Market Nutrition Program (FMNP) is associated with the Special Supplemental Nutrition Program for Women, Infants and Children, popularly known as WIC. Eligible WIC participants are issued FMNP coupons in addition to their regular WIC benefits. These coupons can be used to buy eligible foods from farmers, farmers&apos; markets or roadside stands that have been approved by the state agency to accept FMNP coupons.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Federal_Programs -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Federal_Programs">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+        <rdfs:comment>SNAP, TEFAP &amp; WIC</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Find_Food -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Find_Food">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+        <rdfs:comment>Your local food bank can help you find food today. They partner with food pantries, soup kitchens, and meal programs in your local community to give away free food.
+
+Enter your zip code to find the food bank partnering with Feeding America. They&apos;ll share the locations and hours of nearby food distributions.-web application</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Assistance_Information_System -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Assistance_Information_System"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Distribution -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Distribution">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#supplies"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#supplies"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Soup_kitchen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Kits -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Kits">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Pantry -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Pantry">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+        <rdfs:comment>A food pantry is a distribution center where hungry families can receive food.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Security_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Security_Program">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Security_Service -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Security_Service">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#has"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_bank -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_bank">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Distribution"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A food bank is a non-profit that safely stores millions of pounds of food that will soon be delivered to local food programs, like a food pantry.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Fresh_Fruit_and_Vegetable_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Fresh_Fruit_and_Vegetable_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Hospital -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Hospital">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Indian_Health_Services_Facilities -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Indian_Health_Services_Facilities">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Information_System_Content -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Information_System_Content"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Language -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Language">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Symbology"/>
+        <terms:sourcesource>https://pressbooks.howardcc.edu/soci101/chapter/3-2-the-elements-of-culture/#:~:text=The%20major%20elements%20of%20culture,conceive%20of%20concepts%20and%20objects.</terms:sourcesource>
+        <rdfs:comment>set of symbols. crucial to communication and thus to any society’s culture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Language_Style -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Language_Style">
+        <dc:source>https://www.wikidata.org/wiki/Q2313235</dc:source>
+        <rdfs:comment>set of linguistic variants with specific social meanings</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Language_Translation -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Language_Translation"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Location -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Location"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Material_Culture -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Material_Culture">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Cultural_Factor"/>
+        <dc:source>https://dbpedia.org/page/Material_culture</dc:source>
+        <rdfs:comment>the aspect of social reality grounded in the objects and architecture that surround people.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Meal_Delivery -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Meal_Delivery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Soup_kitchen"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Migrant_Centers -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Migrant_Centers">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Mobile_App -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Mobile_App">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Assistance_Information_System"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Mobile_Clinics -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Mobile_Clinics">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Mobile_Pantry -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Mobile_Pantry">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#NSLP -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#NSLP">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/nslp</terms:sourcesource>
+        <rdfs:comment>The National School Lunch Program (NSLP) is a federally assisted meal program operating in public and nonprofit private schools and residential child care institutions. It provides nutritionally balanced, low-cost or free lunches to children each school day.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Non-profit_Organization -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Non-profit_Organization">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#supports"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Federal_Programs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Norm -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Norm">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Cultural_Factor"/>
+        <dc:source>https://pressbooks.howardcc.edu/soci101/chapter/3-2-the-elements-of-culture/#:~:text=The%20major%20elements%20of%20culture,conceive%20of%20concepts%20and%20objects.</dc:source>
+        <rdfs:comment>standards and expectations for behaving</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Nutrition_Assistance_Programs -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Nutrition_Assistance_Programs">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Federal_Programs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Nutrition_Program_Center -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Nutrition_Program_Center">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Pantry_Delivery -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Pantry_Delivery">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Public_Housing -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Public_Housing">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#SNAP -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#SNAP">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Nutrition_Assistance_Programs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#supplies"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#SNAP_card"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:sourcesource>https://www.fns.usda.gov/snap/outreach</terms:sourcesource>
+        <rdfs:comment>SNAP helps low-income people buy the food, such as fruits, vegetables and whole grains, they need for good health.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#SNAP_card -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#SNAP_card">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#School -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#School">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#School_Breakfast_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#School_Breakfast_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/sbp/school-breakfast-program</terms:sourcesource>
+        <rdfs:comment>The School Breakfast Program (SBP) provides reimbursement to states to operate nonprofit breakfast programs in schools and residential childcare institutions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Senior_Farmers_Market_Nutrition_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Senior_Farmers_Market_Nutrition_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Nutrition_Assistance_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/sfmnp/senior-farmers-market-nutrition-program</terms:sourcesource>
+        <rdfs:comment>The Seniors Farmers&apos; Market Nutrition Program (SFMNP) is designed to:
+
+Provide low-income seniors with access to locally grown fruits, vegetables, honey and herbs.
+Increase the domestic consumption of agricultural commodities through farmers&apos; markets, roadside stands, and community supported agricultural programs.
+Aid in the development of new and additional farmers&apos; markets, roadside stands, and community support agricultural programs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Soup_kitchen -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Soup_kitchen">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+        <rdfs:comment>A soup kitchen, food kitchen, or meal center, is a place where food is offered to the hungry usually for free or sometimes at a below-market price</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Special_Milk_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Special_Milk_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/smp/special-milk-program</terms:sourcesource>
+        <rdfs:comment>The Special Milk Program (SMP) provides milk to children in schools and childcare institutions who do not participate in other federal meal service programs. The program reimburses schools for the milk they serve.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#State_Programs -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#State_Programs">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Summer_EBT -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Summer_EBT">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/sebt</terms:sourcesource>
+        <rdfs:comment>The Summer Electronic Benefit Transfer Program for Children (Summer EBT) will officially launch in summer 2024. Summer EBT provides grocery-buying benefits to low-income families with school-aged children when schools are closed for the summer.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Summer_Food_Service_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Summer_Food_Service_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/sfsp/summer-food-service-program</terms:sourcesource>
+        <rdfs:comment>The Summer Food Service Program (SFSP) is a federally funded, state-administered program. USDA reimburses program operators who serve no-cost, healthy meals and snacks to children and teens. Meals are served at summer sites in low-income communities, where sponsors often also offer enrichment activities, or — in approved rural communities facing access issues — may be provided via grab-n-go or delivery.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Symbology -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Symbology">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Cultural_Factor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#The_Emergency_Food_Assistance_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#The_Emergency_Food_Assistance_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Federal_Programs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <terms:sourcesource>https://www.fns.usda.gov/tefap/emergency-food-assistance-program</terms:sourcesource>
+        <rdfs:comment>The Emergency Food Assistance Program (TEFAP) is a federal program that helps supplement the diets of people with low income by providing them with emergency food assistance at no cost. USDA provides 100% American-grown USDA Foods and administrative funds to states to operate TEFAP.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#The_Patrick_Leahy_Farm_to_School_Program -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#The_Patrick_Leahy_Farm_to_School_Program">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/f2s/farm-to-school</terms:sourcesource>
+        <rdfs:comment>The Patrick Leahy Farm to School Program helps child nutrition program operators incorporate local foods in the National School Lunch Program, the Summer Food Service Program and Child and Adult Care Food Program and all associated programs. In addition, USDA staff work with tribal communities by promoting food sovereignty and the integration of traditional food ways into tribal meal programs.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Trust_In_Institutions -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Trust_In_Institutions"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Trust_in_Information -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Trust_in_Information">
+        <dc:source>https://dbpedia.org/page/Freedom_of_information</dc:source>
+        <rdfs:comment>Access to information is the ability for an individual to seek, receive and impart information effectively</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#USDA_Food_Distribution_Programs -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#USDA_Food_Distribution_Programs">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Federal_Programs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Volunteering is a voluntary act of an individual or group freely giving time and labor for community service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#User -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#User">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#has"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Language"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#has"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Trust_in_Information"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Value -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Value">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Cultural_Factor"/>
+        <dc:source>https://pressbooks.howardcc.edu/soci101/chapter/3-2-the-elements-of-culture/#:~:text=The%20major%20elements%20of%20culture,conceive%20of%20concepts%20and%20objects.</dc:source>
+        <rdfs:comment>element of culture and involve judgments of what is good or bad and desirable or undesirable</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Venue -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Venue"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Volunteer -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Volunteer">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#supports"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#supports"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_bank"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#supports"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Soup_kitchen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#WIC -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#WIC">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Nutrition_Assistance_Programs"/>
+        <terms:sourcesource>https://www.fns.usda.gov/wic/about-wic</terms:sourcesource>
+        <rdfs:comment>The Special Supplemental Nutrition Program for Women, Infants, and Children - It is a federal program funded by the United States Department of Agriculture.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Website -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Website">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Assistance_Information_System"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#after_school_meals -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#after_school_meals">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#hasLocation"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#School"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Service"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#children -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#children">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#User"/>
+        <dc:source>https://en.wikipedia.org/wiki/Child</dc:source>
+        <rdfs:comment>A child (plural: children) is a human being between the stages of birth and puberty, or between the developmental period of infancy and puberty.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#homeless -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#homeless">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#User"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#low-income_families -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#low-income_families">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#User"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#seniors -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#seniors">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#User"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#women -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#women">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#User"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Bilingual_Sp_En -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Bilingual_Sp_En">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Language"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Chicago -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Chicago"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#City_Harvest -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#City_Harvest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Find_Food"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Distribution"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Mobile_Pantry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>City Harvest exists to end hunger in communities throughout New York City. We do this through food rescue and distribution, education, and other practical, innovative solutions.</rdfs:comment>
+        <rdfs:comment>location:New York</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Common_Pantry -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Common_Pantry">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_bank"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Soup_kitchen"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Common Pantry, a 501(c)(3) nonprofit food pantry, was founded in 1967 to combat hunger and food insecurity in specific northern neighborhoods of Chicago.</rdfs:comment>
+        <rdfs:comment>location:Chicago</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Community_Support_Agencies -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Community_Support_Agencies">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Trust_in_Information"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#El_Paso -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#El_Paso">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#City"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Empathetic_Style -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Empathetic_Style">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Language_Style"/>
+        <impacts rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Content"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#FAIS_Language -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#FAIS_Language">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Language"/>
+        <impacts rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Content"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Family -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Family"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Family_Member -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Family_Member"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Feeding_America -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Feeding_America">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Non-profit_Organization"/>
+        <rdfs:comment>Feeding America helps local food banks with food, funds, and capacity building so that together we can serve more of our neighbors facing hunger across the United States. Feeding America is a United States–based nonprofit organization that is a nationwide network of more than 200 food banks that feed more than 46 million people through food pantries, soup kitchens, shelters, and other community-based agencies.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Bank_NYC -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Food_Bank_NYC">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Commodity_Supplemental_Food_Program"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#SNAP"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Soup_kitchen"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Food Bank For New York City has been working to end food poverty in our five boroughs since 1983. As the city’s largest hunger-relief organization, we employ a multifaceted approach centered on helping low-income New Yorkers overcome their circumstances and achieve greater independence.</rdfs:comment>
+        <rdfs:comment>location:New York</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Supplies -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Food_Supplies"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Friend -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Friend"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Friends_and_Family -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Friends_and_Family">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Trust_in_Information"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Goverment_Agencies -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Goverment_Agencies">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Trust_in_Information"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Greater_Chicago_Food_Depository -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Greater_Chicago_Food_Depository">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#SNAP"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Find_Food"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>&quot;CHICAGO’S FOOD BANK: PROGRAMS AND FOOD TO END HUNGER
+We strive to end hunger by connecting our neighbors with healthy food and advancing solutions that address the root causes of hunger.&quot;</rdfs:comment>
+        <rdfs:comment>location:Chicago</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Food_Security_Program"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#SNAP"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_bank"/>
+            </owl:Restriction>
+        </rdf:type>
+        <hasPart rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Website"/>
+        <hasService rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Meal_Delivery"/>
+        <isLocatedAt rdf:resource="https://purl.org/is-cuco-kg#El_Paso"/>
+        <rdfs:comment>El Pasoans Fighting Hunger&apos;s mission is to combat the hunger crisis in our region by strategically procuring and distributing nutritious food through community partners…because no one should go hungry.</rdfs:comment>
+        <rdfs:comment>location:El Paso</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Content -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Content">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Information_System_Content"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Meal_Delivery -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Meal_Delivery">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Meal_Delivery"/>
+        <considers rdf:resource="https://purl.org/is-cuco-kg#Prepared_meals"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Website -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Website">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Website"/>
+        <hasPart rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Content"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Los_Angeles -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Los_Angeles"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Los_Angeles_Regional_Food_Bank -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Los_Angeles_Regional_Food_Bank">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Child_Nutrition_Programs"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Commodity_Supplemental_Food_Program"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#SNAP"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Distribution"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Volunteer"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>We source, acquire and distribute food throughout Los Angeles County through our partnering agencies and programs.</rdfs:comment>
+        <rdfs:comment>location:Los Angeles</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#New_Hope_Pantry -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#New_Hope_Pantry">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>New Hope Community Food Pantry is an emergency food pantry serving</rdfs:comment>
+        <rdfs:comment>location:Chicago</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#New_York -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#New_York"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#New_York_City -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#New_York_City"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Pilsen_Food_Pantry -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Pilsen_Food_Pantry">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>The Pilsen Food Pantry was founded by the Figueroa Wu Family Foundation in 2018. The pantry is an extension of the Foundation’s mission to bring anti-poverty services into areas of unmet need.</rdfs:comment>
+        <rdfs:comment>location:Chicago</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Prepared_meals -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Prepared_meals"/>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Spanish_Language -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Spanish_Language">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Language"/>
+        <isA rdf:resource="https://purl.org/is-cuco-kg#symbol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#WIC_California -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#WIC_California">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#WIC"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#WIC"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>The Special Supplemental Nutrition Program for Women, Infants and Children (WIC) is a program funded by the United States Department of Agriculture (USDA) to support healthy pregnancies, birth outcomes, growth, and development.</rdfs:comment>
+        <rdfs:comment>location:Southern California</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#symbol -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#symbol">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Symbology"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#user1 -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#user1">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#User"/>
+        <prefers rdf:resource="https://purl.org/is-cuco-kg#Prepared_meals"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#Farmers_Market"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#Hospital"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#Indian_Health_Services_Facilities"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#Migrant_Centers"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#Mobile_Clinics"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#Public_Housing"/>
+            <rdf:Description rdf:about="https://purl.org/is-cuco-kg#School"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
