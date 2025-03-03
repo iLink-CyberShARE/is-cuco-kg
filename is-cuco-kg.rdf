@@ -133,14 +133,6 @@
     
 
 
-    <!-- https://purl.org/is-cuco-kg#isA -->
-
-    <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isA">
-        <rdfs:subPropertyOf rdf:resource="https://purl.org/is-cuco-kg#associatedWith"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://purl.org/is-cuco-kg#isConsideredBy -->
 
     <owl:ObjectProperty rdf:about="https://purl.org/is-cuco-kg#isConsideredBy">
@@ -372,6 +364,22 @@ Enter your zip code to find the food bank partnering with Feeding America. They&
     
 
 
+    <!-- https://purl.org/is-cuco-kg#Food_Assistance_Mobile_App -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Assistance_Mobile_App">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Assistance_Information_System"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/is-cuco-kg#Food_Assistance_Website -->
+
+    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Assistance_Website">
+        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Assistance_Information_System"/>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/is-cuco-kg#Food_Distribution -->
 
     <owl:Class rdf:about="https://purl.org/is-cuco-kg#Food_Distribution">
@@ -514,7 +522,6 @@ Enter your zip code to find the food bank partnering with Feeding America. They&
     <!-- https://purl.org/is-cuco-kg#Material_Culture -->
 
     <owl:Class rdf:about="https://purl.org/is-cuco-kg#Material_Culture">
-        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Cultural_Factor"/>
         <dc:source>https://dbpedia.org/page/Material_culture</dc:source>
         <rdfs:comment>the aspect of social reality grounded in the objects and architecture that surround people.</rdfs:comment>
     </owl:Class>
@@ -533,14 +540,6 @@ Enter your zip code to find the food bank partnering with Feeding America. They&
 
     <owl:Class rdf:about="https://purl.org/is-cuco-kg#Migrant_Centers">
         <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Venue"/>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.org/is-cuco-kg#Mobile_App -->
-
-    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Mobile_App">
-        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Assistance_Information_System"/>
     </owl:Class>
     
 
@@ -870,14 +869,6 @@ Aid in the development of new and additional farmers&apos; markets, roadside sta
     
 
 
-    <!-- https://purl.org/is-cuco-kg#Website -->
-
-    <owl:Class rdf:about="https://purl.org/is-cuco-kg#Website">
-        <rdfs:subClassOf rdf:resource="https://purl.org/is-cuco-kg#Food_Assistance_Information_System"/>
-    </owl:Class>
-    
-
-
     <!-- https://purl.org/is-cuco-kg#after_school_meals -->
 
     <owl:Class rdf:about="https://purl.org/is-cuco-kg#after_school_meals">
@@ -959,60 +950,6 @@ Aid in the development of new and additional farmers&apos; markets, roadside sta
     
 
 
-    <!-- https://purl.org/is-cuco-kg#City_Harvest -->
-
-    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#City_Harvest">
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Find_Food"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Distribution"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://purl.org/is-cuco-kg#offers"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Mobile_Pantry"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdfs:comment>City Harvest exists to end hunger in communities throughout New York City. We do this through food rescue and distribution, education, and other practical, innovative solutions.</rdfs:comment>
-        <rdfs:comment>location:New York</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://purl.org/is-cuco-kg#Common_Pantry -->
-
-    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Common_Pantry">
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_bank"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdf:type>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-                <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Soup_kitchen"/>
-            </owl:Restriction>
-        </rdf:type>
-        <rdfs:comment>Common Pantry, a 501(c)(3) nonprofit food pantry, was founded in 1967 to combat hunger and food insecurity in specific northern neighborhoods of Chicago.</rdfs:comment>
-        <rdfs:comment>location:Chicago</rdfs:comment>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://purl.org/is-cuco-kg#Community_Support_Agencies -->
 
     <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Community_Support_Agencies">
@@ -1038,11 +975,19 @@ Aid in the development of new and additional farmers&apos; markets, roadside sta
     
 
 
+    <!-- https://purl.org/is-cuco-kg#English_Language -->
+
+    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#English_Language">
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Language"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://purl.org/is-cuco-kg#FAIS_Language -->
 
     <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#FAIS_Language">
         <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Language"/>
-        <impacts rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Content"/>
+        <hasPart rdf:resource="https://purl.org/is-cuco-kg#Empathetic_Style"/>
     </owl:NamedIndividual>
     
 
@@ -1063,6 +1008,7 @@ Aid in the development of new and additional farmers&apos; markets, roadside sta
 
     <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Feeding_America">
         <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Non-profit_Organization"/>
+        <dc:source>https://www.feedingamerica.org/</dc:source>
         <rdfs:comment>Feeding America helps local food banks with food, funds, and capacity building so that together we can serve more of our neighbors facing hunger across the United States. Feeding America is a United States–based nonprofit organization that is a nationwide network of more than 200 food banks that feed more than 46 million people through food pantries, soup kitchens, shelters, and other community-based agencies.</rdfs:comment>
     </owl:NamedIndividual>
     
@@ -1095,6 +1041,7 @@ Aid in the development of new and additional farmers&apos; markets, roadside sta
                 <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Soup_kitchen"/>
             </owl:Restriction>
         </rdf:type>
+        <dc:source>https://www.foodbanknyc.org/</dc:source>
         <rdfs:comment>Food Bank For New York City has been working to end food poverty in our five boroughs since 1983. As the city’s largest hunger-relief organization, we employ a multifaceted approach centered on helping low-income New Yorkers overcome their circumstances and achieve greater independence.</rdfs:comment>
         <rdfs:comment>location:New York</rdfs:comment>
     </owl:NamedIndividual>
@@ -1104,20 +1051,6 @@ Aid in the development of new and additional farmers&apos; markets, roadside sta
     <!-- https://purl.org/is-cuco-kg#Food_Supplies -->
 
     <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Food_Supplies"/>
-    
-
-
-    <!-- https://purl.org/is-cuco-kg#Friend -->
-
-    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Friend"/>
-    
-
-
-    <!-- https://purl.org/is-cuco-kg#Friends_and_Family -->
-
-    <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Friends_and_Family">
-        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Trust_in_Information"/>
-    </owl:NamedIndividual>
     
 
 
@@ -1144,6 +1077,7 @@ Aid in the development of new and additional farmers&apos; markets, roadside sta
                 <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Find_Food"/>
             </owl:Restriction>
         </rdf:type>
+        <dc:source>https://www.chicagosfoodbank.org/</dc:source>
         <rdfs:comment>&quot;CHICAGO’S FOOD BANK: PROGRAMS AND FOOD TO END HUNGER
 We strive to end hunger by connecting our neighbors with healthy food and advancing solutions that address the root causes of hunger.&quot;</rdfs:comment>
         <rdfs:comment>location:Chicago</rdfs:comment>
@@ -1176,6 +1110,7 @@ We strive to end hunger by connecting our neighbors with healthy food and advanc
         <hasPart rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Website"/>
         <hasService rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Meal_Delivery"/>
         <isLocatedAt rdf:resource="https://purl.org/is-cuco-kg#El_Paso"/>
+        <dc:source>https://kellyfresh.org/</dc:source>
         <rdfs:comment>El Pasoans Fighting Hunger&apos;s mission is to combat the hunger crisis in our region by strategically procuring and distributing nutritious food through community partners…because no one should go hungry.</rdfs:comment>
         <rdfs:comment>location:El Paso</rdfs:comment>
     </owl:NamedIndividual>
@@ -1202,7 +1137,7 @@ We strive to end hunger by connecting our neighbors with healthy food and advanc
     <!-- https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Website -->
 
     <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Website">
-        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Website"/>
+        <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Food_Assistance_Website"/>
         <hasPart rdf:resource="https://purl.org/is-cuco-kg#Kelly_Center_for_Hunger_Relief_Content"/>
     </owl:NamedIndividual>
     
@@ -1247,6 +1182,7 @@ We strive to end hunger by connecting our neighbors with healthy food and advanc
                 <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Volunteer"/>
             </owl:Restriction>
         </rdf:type>
+        <dc:source>https://www.lafoodbank.org/about/</dc:source>
         <rdfs:comment>We source, acquire and distribute food throughout Los Angeles County through our partnering agencies and programs.</rdfs:comment>
         <rdfs:comment>location:Los Angeles</rdfs:comment>
     </owl:NamedIndividual>
@@ -1262,6 +1198,7 @@ We strive to end hunger by connecting our neighbors with healthy food and advanc
                 <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
             </owl:Restriction>
         </rdf:type>
+        <dc:source>https://www.newhopefoodpantry.com/obtaining-food</dc:source>
         <rdfs:comment>New Hope Community Food Pantry is an emergency food pantry serving</rdfs:comment>
         <rdfs:comment>location:Chicago</rdfs:comment>
     </owl:NamedIndividual>
@@ -1289,6 +1226,7 @@ We strive to end hunger by connecting our neighbors with healthy food and advanc
                 <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#Food_Pantry"/>
             </owl:Restriction>
         </rdf:type>
+        <dc:source>https://www.pilsenfoodpantry.com/food</dc:source>
         <rdfs:comment>The Pilsen Food Pantry was founded by the Figueroa Wu Family Foundation in 2018. The pantry is an extension of the Foundation’s mission to bring anti-poverty services into areas of unmet need.</rdfs:comment>
         <rdfs:comment>location:Chicago</rdfs:comment>
     </owl:NamedIndividual>
@@ -1305,7 +1243,6 @@ We strive to end hunger by connecting our neighbors with healthy food and advanc
 
     <owl:NamedIndividual rdf:about="https://purl.org/is-cuco-kg#Spanish_Language">
         <rdf:type rdf:resource="https://purl.org/is-cuco-kg#Language"/>
-        <isA rdf:resource="https://purl.org/is-cuco-kg#symbol"/>
     </owl:NamedIndividual>
     
 
@@ -1320,6 +1257,7 @@ We strive to end hunger by connecting our neighbors with healthy food and advanc
                 <owl:someValuesFrom rdf:resource="https://purl.org/is-cuco-kg#WIC"/>
             </owl:Restriction>
         </rdf:type>
+        <dc:source>https://www.phfewic.org/</dc:source>
         <rdfs:comment>The Special Supplemental Nutrition Program for Women, Infants and Children (WIC) is a program funded by the United States Department of Agriculture (USDA) to support healthy pregnancies, birth outcomes, growth, and development.</rdfs:comment>
         <rdfs:comment>location:Southern California</rdfs:comment>
     </owl:NamedIndividual>
